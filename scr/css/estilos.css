@@ -1,0 +1,136 @@
+body {
+    font-family: 'Poppins'/*Fonte do texto da pagina*/
+}
+
+.cabecalho {
+    display: flex; /* Usada para deixar os elementos um do lado do outro ( tem que colocar no HEAD ) */
+    justify-content: space-between; /*Usado para colocar os elementos no outro lado da tela*/
+    padding: 30px;
+    max-width: 1440px; /* Largura max*/
+    margin: 0 auto; /* outro modo de centralizar os elementos*/
+}
+
+.cabecalho .logo {
+width: 65px; /*Usada para aumentar ou diminuir uma imagem*/
+}
+
+.cabecalho .menu {
+    display: flex;
+    align-items: center; /*Usada para alinhar os elementos (Porém eles precisam de largura e altura)*/
+    height: 100%; /*Altura*/
+}
+
+.cabecalho nav li a {
+    font-weight: bold; /*Customizar a fonte para negrito*/
+    color:#ffffff;
+    font-size: 25px; /*Tamanho da fonte*/
+    padding: 10px 20px; /* Usado para dar espaço, 10px seria da vertical (topo e baixo) e 20px seria o espaçamento dos lados*/
+    border-radius: 50px; /* Deixar as bordas arrendondadas*/
+    transition: 0.5s; /* Tempo para fazer a transição do mouse passar por cima*/
+}
+
+.cabecalho nav li a:hover { /*Hover seria a animação de quando passa o mouse por cima*/
+    background-color: #d5011d;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto; 
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 148.95px);/* Vh seria o total da tela e essa subtração faz com que o site não tenha a aba de rolamento do lado esquerdo*/
+    padding: 0 30px 30px;
+}
+
+.container .imagem_titulo{
+max-width: 500px;
+}
+
+.container .descricao {
+    color: #a8adb7;
+    width: 85%; /* Largura*/
+    font-size: 18px; /*aumentar a fonte*/
+    margin: 30px 0;
+}
+
+.container .botao_trailer {
+background-color: #ff0021;
+color: #ffffff; /*cor somente do texto*/
+padding: 15px;
+font-size: 18px;
+font-weight: bold;
+cursor: pointer; /* quando passar o mouse por cima, ficar clicavél*/
+border: none; /*sem borda*/
+text-transform: uppercase; /* texto em MAIUSCULO*/
+transition: 0.5s all ease-in-out; /*Usei para fazer uma animação de quando passar o mouse aumnetar o botão*/
+}
+
+.container .botao_trailer:hover {
+    transform: scale(1.1);/*animação de aumentar*/
+}
+
+.fundo_video {
+    position: absolute;/*usado para sobrepor algo*/
+    z-index: -1; /*Usei para deixar o video atrás dos outros elementos*/
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* usei para esconder os espaços que transbordaram*/
+    display: flex;
+    justify-content: center;
+}
+.fundo_video .video {
+    height: 100vh;
+}
+ 
+.fundo_video::after { /*Usei para fazer o sombreado do video*/
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 100%);/*Usei para fazer a obacidade do video, site https://cssgradient.io/*/
+}
+
+.modal{
+    visibility: hidden;
+position: fixed;
+width: 100vw;
+height: 100vh;
+top: 0;
+left: 0;
+background-color: rgba(52 ,52 ,50, 0.749)
+}
+
+.conteudo_modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    border-radius: 5px;
+    gap: 15px;
+}
+.fechar_modal {
+    background-color: #ffffff;
+    color: #f03a21;
+    font-weight: bold;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.modal iframe {
+border-width: 0;
+width: 640px;
+height: 360px;
+}
+
+.modal.aberto {/*Quando duas classes estiverem juntas, serve para customizar as duas ao mesmo tempo*/
+opacity: 1;
+visibility: visible;
+}
+

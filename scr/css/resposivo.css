@@ -1,0 +1,57 @@
+@media (max-width: 1200px) { /*Usei para que, se passar de 1200px, o video irá sumir e ficará somente o sombreado*/
+    body {/*Esse arquivo tem como finalidade ajustar o site para mobile*/
+        background: rgb(0,0,0);
+        background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 100%);
+    }
+
+    .fundo_video {
+        display: none;
+    }
+
+    .container {
+        flex-wrap: wrap; /*joga os elementos para baixo, fazendo-os caberem na tela*/
+        justify-content: center;
+        height: auto;
+        gap: 30px;
+    }
+
+.container .goku {
+    max-width: 50%;
+}
+
+.container .informacoes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .descricao {
+    color: #ffffff;
+    align-items: center;
+}
+}
+
+@media (max-width: 500px) { /*para teleas menores*/
+    .cabecalho {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .container .imagem_titulo {
+        max-width: 75%;
+    }
+.modal .fechar_modal {
+    width: 30px;
+    line-height: 30px;
+}
+.modal #video {
+    width: 300px;
+    height: 169px;
+}
+}
+@media (max-width: 376px){
+    .modal #video{
+        width: 250px;
+        height: 140px;
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="./scr/imagens/icone dbz.png" type="image/x-icon">
+    <link rel="stylesheet" href="./scr/css/reset.css">
+    <link rel="stylesheet" href="./scr/css/estilos.css">
+    <link rel="stylesheet" href="./scr/css/resposivo.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
+    <title>Dragon Ball Z </title>
+</head>
+<body>
+<div class="fundo_video">
+    <video class="video" autoplay loop muted>
+        <source
+            src="./scr/video/lv_0_20230121194633.mp4"
+            type="video/mp4">
+    </video>
+</div>
+    <header class="cabecalho">
+        <a>
+            <img class="logo" src="./scr/imagens/Logo Dbzl.jpg" alt="logo esferas_goku">
+        </a>
+        <nav>
+            <ul class="menu">
+                <li> <a href="#">Home </a></li> <!-- "a" usado para deixar clicavél o icone-->
+                <li> <a href="#">Detalhes </a></li><!--"#" pode ser substituido por um link para outro HTML-->
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="informaçoes">
+            <img class="imagem_titulo" src="./scr/imagens/Logo DBZ t.png" alt="Imagem do título do filme">
+            <p class="descricao"> Criada por Akira Toryiama, a franquia conta a história de Son Goku, guerreiro que descobre ser parte de um legado de poderosos conquistadores alienígenas - e passa a defender seu planeta adotivo, a Terra, de outros seres igualmente superfortes e capazes de feitos descomunais.
+            </p>
+            <button class="botao_trailer"> Veja o Trailer</button>
+        </div>
+        <img class="goku" src="./scr/imagens/DBZ fundo t2.png" width="575" height="535">
+        <div class="modal">
+            <div class="conteudo_modal">
+                <span class="fechar_modal">X</span>
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/watch?v=HNY3rlgfxvA&t=2s" title="Trailer Dublado" frameborder="1"
+                aloow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe> <!--Permite que tenha o video do youtube na minha pagina-->
+            </div>
+        </div>
+    </main>
+    <script src="./scr/js/index.js"></script>
+</body>
+</html>
